@@ -18,6 +18,8 @@
           
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 </head>
 <body class="light-bg">
     <header class="light-bg">
@@ -26,8 +28,15 @@
         <a onclick="messagePopUp()" href="#">CONTACT</a>
         
         <div id="btn-setBg">
-            <button onclick="SetBg()" class="btn btn-outline-danger">O</button>
-            Dark Mode
+                <span onclick="SetBg()" id="radio">
+                    <span id="circle">.</span>
+                </span>
+
+                <button onclick="OpenSidebar()">
+                    <svg id="hamburguer-menu" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                      </svg>
+                </button>
         </div>
     </header>
     
@@ -114,6 +123,21 @@
     </main>
 
     <br style="clear: both;">
+
+    <aside id="lateral-content" class="light-bg">
+        <h2>Outras informações</h2>
+        <ul>
+            <li><h3>🎥 Video Creator</h3>
+                <p>Obtive boa expêriencia em criação e edição de vídeos e fotos enquanto trabalhava em lojas físicas de Games! utilizando aplicações como Capcut, Canvas e Picsarts. Também uma leve noção em criação de artes, mas nada avançado! futuramente deixarei uma página dedicada a meus serviços nesta área.</p>
+            </li>
+            <li><h3>🎮 Desenvolvimento De Jogos</h3>
+                <p>Motivo a qual me deu interesse e amor pela área de desenvolvimento, aos meus 11 anos, comecei a estudar lógica de programação e logo após aprendi Csharp e comecei a criar meus próprios jogos 2D na Unity!</p>
+            </li>
+            <li><h3>🎸 Música</h3>
+                <p>Mais um hobbie mas algo que sempre me fez facilitar minha comunicação e expressão em minha vida social, como profissional, atualmente toco e crio músicas solo ou acompanhado da minha atual banda. Caso queira, vá conferir em meu <a href="#">Canal</a>!</p>
+            </li>
+        </ul>
+    </aside>
     
     <footer>
         <span>Desenvolvido por Arthur T. Martins © - </span>
@@ -122,7 +146,9 @@
     <div id="contact">
     </div>
     
+
     <script src="scripts/game.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 </html>
