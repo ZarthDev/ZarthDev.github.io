@@ -10,7 +10,26 @@ function ShakeImg ( ) {
     }, 1500);
 }
 
+let sidebar = document.getElementById('lateral-content');
+let sidebarActive = false;
+
+let screenSidebar = (screenSize * 100) / 40;
+
+function OpenSidebar ( ) {
+    if ( !sidebarActive ) {
+        sidebar.style.left = 0;
+        sidebarActive = true;
+    }else{
+        sidebar.style.left = `-${screenSidebar}px`;
+        sidebarActive = false;
+    }
+}
+
 function SetBg ( ) {
+    let radioBtn = document.getElementById('circle');
+
+    radioBtn.style.animation = '';
+
     if (StateColor === 'Light') {
         StateColor = 'Dark';
 
@@ -22,6 +41,8 @@ function SetBg ( ) {
                 elements[i].className = 'dark-bg';
             }
         }
+
+        radioBtn.style.animation = 'RollRight 0.5s forwards';
     }else{
         StateColor = 'Light';
         
@@ -33,6 +54,9 @@ function SetBg ( ) {
                 elements[i].className = 'light-bg';
             }
         }
+
+        
+        radioBtn.style.animation = 'RollLeft 0.5s forwards';
     }
 }
 
